@@ -34,7 +34,7 @@
   }
 ```
 
-4. aprasyti tipa sitam
+3. aprasyti tipa sitam
 
 ```
 const users = [
