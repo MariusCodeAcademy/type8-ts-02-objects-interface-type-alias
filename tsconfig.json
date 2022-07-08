@@ -19,6 +19,8 @@
     "noFallthroughCasesInSwitch": true, // switch direktyvos sugriežtinimas
     "noImplicitOverride": true, // reikalavimas įvardinti  aktažodžiu 'override' jeigu perrašome funkcijas
     "removeComments": true, // ar pašalinti komentarus sukompiliuotuose failuose                    
-    "skipLibCheck": true // ar praleisti tipų tikrinimą naudojant bibliotekas
+    "skipLibCheck": true, // ar praleisti tipų tikrinimą naudojant bibliotekas
+    // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+    
   },
 }
