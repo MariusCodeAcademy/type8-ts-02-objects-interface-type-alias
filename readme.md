@@ -55,3 +55,14 @@ const users = [
   },
 ];
 ```
+
+4. naujame kintamajame usersWithStatus issaugoti 3 uzduoties masyva, kurio objektai praturtinami isOnline statusu kuri sudedamas random true arba false
+
+```
+  {
+    username: 'Morkunas',
+    password: 'grauzikas',
+    id: 'u_752',
+    isOnline: true
+  },
+```
