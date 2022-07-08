@@ -1,4 +1,14 @@
-export const people = [
+export interface UserInfs {
+  name: string;
+  surname: string;
+  sex: 'male' | 'female';
+  age: number;
+  income: number;
+  married: boolean;
+  hasCar: boolean;
+}
+
+export const people: UserInfs[] = [
   {
     name: 'Jonas',
     surname: 'Jonaitis',
