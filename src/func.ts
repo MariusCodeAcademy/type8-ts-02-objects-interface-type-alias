@@ -20,3 +20,27 @@ console.log(youngLadies(people));
 
 // 5. parasyti fn kuri suskaiciuoja ir grazina kiek yra vairuojanciu vyru ir moteru
 // pvz {man: 4, woman: 5}
+
+interface Drivers {
+  man: number;
+  woman: number;
+}
+
+function getDriversObj(arr: UserInfs[]): Drivers {
+  const localDrivers: Drivers = {
+    man: 0,
+    woman: 0,
+  };
+  arr
+    .filter((p: UserInfs): boolean => p.hasCar)
+    .forEach((p: UserInfs): void => {
+      if (p.sex === 'male') {
+        localDrivers.man = localDrivers.man + 1;
+      } else {
+        localDrivers.woman++;
+      }
+    });
+  return localDrivers;
+}
+const rez = getDriversObj(people);
+console.log('rez ===', rez);
