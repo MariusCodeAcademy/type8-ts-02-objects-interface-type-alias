@@ -33,3 +33,25 @@
     },
   }
 ```
+
+4. aprasyti tipa sitam
+
+```
+const users = [
+  {
+    username: 'Serbentautas',
+    password: '123456',
+    id: 'u_123',
+  },
+  {
+    username: 'Gaublys',
+    password: 'asdddsss',
+    id: 'u_456',
+  },
+  {
+    username: 'Morkunas',
+    password: 'grauzikas',
+    id: 'u_752',
+  },
+];
+```
