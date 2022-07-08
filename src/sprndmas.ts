@@ -48,3 +48,46 @@ const fsItm1: FakeStoreItemInteface = {
     count: 120,
   },
 };
+
+interface UsersWithPassInf {
+  username: string;
+  password: string;
+  id: string;
+}
+interface UsersWithPassAndOnlineInf extends UsersWithPassInf {
+  isOnline: boolean;
+}
+
+const users: UsersWithPassInf[] = [
+  {
+    username: 'Serbentautas',
+    password: '123456',
+    id: 'u_123',
+  },
+  {
+    username: 'Gaublys',
+    password: 'asdddsss',
+    id: 'u_456',
+  },
+  {
+    username: 'Morkunas',
+    password: 'grauzikas',
+    id: 'u_752',
+  },
+];
+// users[1].isLoggedIn = true; // err
+
+// parasyti praturtinimo su isOnline funkcija
+
+function praturtintiUsers(arr: UsersWithPassInf[]): UsersWithPassAndOnlineInf[] {
+  const userWithisOnline: UsersWithPassAndOnlineInf[] = arr.map((uObj: UsersWithPassInf) => {
+    console.log('uObj ===', uObj);
+    return {
+      ...uObj,
+      isOnline: Boolean(Math.round(Math.random())),
+    };
+  });
+  return userWithisOnline;
+}
+const turtingi = praturtintiUsers(users);
+console.log('turtingi ===', turtingi);
