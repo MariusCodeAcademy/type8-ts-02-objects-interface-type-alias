@@ -42,5 +42,25 @@ function getDriversObj(arr: UserInfs[]): Drivers {
     });
   return localDrivers;
 }
+function getDriversObjReduce(arr: UserInfs[]): Drivers {
+  const startingPoint: Drivers = {
+    man: 0,
+    woman: 0,
+  };
+
+  return arr.reduce((localDrivers: Drivers, currentPerson: UserInfs) => {
+    if (currentPerson.hasCar === true) {
+      if (currentPerson.sex === 'male') {
+        localDrivers.man = localDrivers.man + 1;
+      } else {
+        localDrivers.woman++;
+      }
+    }
+
+    return localDrivers;
+  }, startingPoint);
+}
 const rez = getDriversObj(people);
 console.log('rez ===', rez);
+const reduceRez = getDriversObjReduce(people);
+console.log('reduceRez ===', reduceRez);
